@@ -85,6 +85,17 @@ public class ContaServiceTest {
         assertTrue(contaEntity.getStatus());
     }
 
+    @Test
+    public void deleteContaTest() {
+        Long id = 1L;
+        ContaEntity entity = ContaStub.createEntity();
+        when(contaRepository.findById(id)).thenReturn(Optional.of(entity));
+
+        contaService.deleteConta(1L);
+        ContaEntity contaEntity = capturarSave();
+        assertFalse(contaEntity.getStatus());
+    }
+
     private ContaEntity capturarSave() {
         ArgumentCaptor<ContaEntity> captor = ArgumentCaptor.forClass(ContaEntity.class);
         Mockito.verify(contaRepository, Mockito.atLeastOnce()).save(captor.capture());
