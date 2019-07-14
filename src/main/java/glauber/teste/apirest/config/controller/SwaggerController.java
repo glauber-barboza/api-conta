@@ -10,9 +10,9 @@ import java.io.IOException;
 @RestController
 @ApiIgnore
 public class SwaggerController {
- 
+
     @GetMapping(value = "/")
     public void index(HttpServletResponse response) throws IOException {
-    	response.sendRedirect("swagger-ui.html");
+        response.sendRedirect("swagger-ui.html");
     }
 }

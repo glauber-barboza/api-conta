@@ -3,7 +3,6 @@ package glauber.teste.apirest.entity;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -30,7 +29,7 @@ public class ContaEntity {
     private LocalDateTime dataAtualizacao;
 
     @Column(name = "status")
-    @Type(type="numeric_boolean")
+    @Type(type = "numeric_boolean")
     private Boolean status;
 
     public Long getIdConta() {

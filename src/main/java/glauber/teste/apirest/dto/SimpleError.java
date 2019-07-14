@@ -5,7 +5,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class SimpleError {
 
